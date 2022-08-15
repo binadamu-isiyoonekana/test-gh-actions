@@ -16,13 +16,10 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v3
 
-      - name: List Github Workspace folder
-        run: |
-          ls -al /home
-
       # Compile source LaTeX document (behind the scene, the 'latexmk' compiler is used by default)
       - name: Compile LaTeX document
         uses: binadamu-isiyoonekana/latex-action@main
         with:
           main_file: main.tex
-          args: -lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -latexoption=-shell-escape
+          working_directory: "."
+          args: "-lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -latexoption=-shell-escape"
