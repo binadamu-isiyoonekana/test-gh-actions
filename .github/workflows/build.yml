@@ -1,0 +1,28 @@
+
+name: Build LaTeX document
+
+on:
+  # Run this workflow on push to the main branch
+  push:
+
+jobs:
+          
+  # Compile LaTeX document (but don't release it)
+  build-document:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout repository
+      - name: Set up repository
+        uses: actions/checkout@v3
+
+      - name: List Github Workspace folder
+        run: |
+          ls -al /home
+
+      # Compile source LaTeX document (behind the scene, the 'latexmk' compiler is used by default)
+      - name: Compile LaTeX document
+        uses: binadamu-isiyoonekana/latex-action@main
+        with:
+          root_file: main.tex
+          args: -lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -latexoption=-shell-escape
