@@ -18,7 +18,7 @@ jobs:
 
       # Compile source LaTeX document (behind the scene, the 'latexmk' compiler is used by default)
       - name: Compile LaTeX document
-        uses: binadamu-isiyoonekana/latex-action@main
+        uses: binadamu-isiyoonekana/latex-action/latex-action@main
         with:
           main_file: main.tex
           working_directory: "."
