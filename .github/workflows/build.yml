@@ -21,5 +21,3 @@ jobs:
         uses: binadamu-isiyoonekana/latex-action@main
         with:
           main_file: main.tex
-          working_directory: "."
-          args: "-lualatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -latexoption=-shell-escape"
