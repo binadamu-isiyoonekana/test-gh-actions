@@ -21,3 +21,4 @@ jobs:
         uses: binadamu-isiyoonekana/latex-action@main
         with:
           main_file: main.tex
+          working_directory: "."
