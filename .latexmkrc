@@ -9,7 +9,7 @@
 # BASIC SETTINGS
 # -------------------------------------------------------------------------------------------------
 
-# Select 'lualatex' engine
+# Select 'lualatex' as default LaTeX engine (settings format since latexmk version 4.51)
 $pdf_mode = 4;
 $postscript_mode = $dvi_mode = 0;
 
